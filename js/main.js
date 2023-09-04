@@ -1,8 +1,8 @@
 // 1. Klawisz <- (stzałka w lewo) przesuwa w lewo (cofa) slider
 // 2. Klawisz -> (stzałka w lewo) przesuwa w prawo slider (do przod, czyli tak jak przy funkcji changeSlide)
 // 3. (strzałki) wstrzymuje setInterval, a po zmianie slajdu uruchamiają go ponownie (czas ma się liczyć ponownie)
+import Slider from "./Slider";
 
-console.log(a);
 const slideList = [
   {
     img: "images/img1.jpg",
@@ -18,14 +18,14 @@ const slideList = [
   },
 ];
 
-const image = document.querySelector("img.slider");
-const h1 = document.querySelector("h1.slider");
-const dots = [...document.querySelectorAll(".dots span")];
-// Interfejs
-const time = 3000;
-let active = 0;
-
-// Implementacje
+const slide = new Slider(
+  slideList,
+  "img.slider",
+  "h1.slider",
+  "div.dots",
+  2000,
+  0
+);
 
 const changeDot = () => {
   const activeDot = dots.findIndex((dot) => dot.classList.contains("active"));
