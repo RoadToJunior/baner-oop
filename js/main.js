@@ -18,7 +18,7 @@ const slideList = [
   },
 ];
 
-const slide = new Slider(
+export const slide = new Slider(
   slideList,
   "img.slider",
   "h1.slider",

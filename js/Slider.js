@@ -1,4 +1,5 @@
 import Slide from "./Slide";
+import main from "./main";
 
 export default class Slider {
   constructor(
@@ -21,4 +22,7 @@ export default class Slider {
     }
     window.addEventListener("keydown", (e) => keyChangeSlide(e));
   }
+
+  addSlide(slide) }
+  this.slides.push(slide);
 }
